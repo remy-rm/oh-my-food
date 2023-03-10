@@ -1,0 +1,90 @@
+
+input[type="checkbox"] {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+  }
+
+  .restaurant{
+    padding: $padding-bloc;
+    &__card{
+        @include web-display;
+    }
+}
+.card{
+    
+    background-color: $bg-color;
+    box-shadow: $shadow;
+    border-radius: $brd-button;
+    margin: $margin-bloc;
+    @include web-only {min-width:280px;};
+    
+    &__top{
+        position:relative ;
+        &--img img{
+            width: 100%;
+            height: 12rem;
+            object-fit: cover;
+            object-position: 50% 50%;
+            overflow:hidden ;
+            border-radius: nth($list: $brd-button
+            , $n:1  ) nth($list: $brd-button
+            , $n:1  ) 0 0 ;
+        }
+        &--new{
+            position: absolute;
+            right: 1rem;
+            top: 12px;
+            background-color: $tertiary-color;
+            @include bg-txt-color($tertiary-color);
+            & p{
+                margin: 1.3vh;
+
+            }
+        }
+    
+    }
+    &__bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 3vh;
+        
+        &--like{
+            font-weight: 400;
+            font-size: 1.6rem;
+            position: relative;
+            &::after{   
+            content: "\f004";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            right: 0;
+            color: black;
+            cursor:pointer ;
+            }
+            &:hover{
+                background: $bg-gradient-ho;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            
+            }
+        }
+
+
+    }   
+    .heart:checked + label .card__bottom--like::after {
+        animation: like 0.8s forwards ease-in-out;
+        transform-origin: 50% 96%;
+        background: $bg-gradient-ho;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+             
+    }
+    .heart:not(:checked)+ label .card__bottom--like::after{
+        animation: rv-like 0.8s reverse ease-out;
+        transform-origin: 50% 96%;
+        
+    }
+    

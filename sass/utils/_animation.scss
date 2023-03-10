@@ -1,0 +1,92 @@
+@keyframes spin{
+    0%{ 
+        transform: rotate(0deg);
+    }
+    100%{
+       transform: rotate(360deg);
+    }   
+}
+@keyframes load {
+
+    0%{ transform: scaley(1);
+        
+    }
+    100%{
+        transform: scaley(4);
+    }
+}
+@keyframes charge{
+0%{
+        opacity: 1;
+        
+}
+50%{
+    height: 100%;
+}
+100%{
+        opacity: 0%;
+        height: 0%;
+        
+    }
+    
+}
+@keyframes gradiant {
+    from {
+        background-image:$bg-gradient;
+    }
+    to{
+        background-image: $bg-gradient-ho;
+    }
+    
+}@keyframes like{
+    0%{
+        color: $secondary-color;
+        font-weight: 800;
+        scale: (0);
+        
+        
+        
+
+    }
+    62%{
+        scale: (1.2);
+    }
+    100%{
+        scale:(1);
+        color: $secondary-color;
+        font-weight: 800;
+    
+    }
+
+}
+@keyframes rv-like {
+    100%{ 
+        scale: 1;
+        font-weight: 800;
+        background: $bg-gradient-ho;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+    }
+    .1%{
+        background: $bg-gradient-ho;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    0%{
+        scale: 0;
+        color: black;
+    }
+    
+}
+@keyframes validate {
+    0%{
+        width: 0%; 
+
+    }
+    
+    100%{
+        width: 23%;
+
+    }
+}

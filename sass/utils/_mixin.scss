@@ -1,0 +1,55 @@
+@mixin display-ico{
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+}
+
+
+@mixin display-col{
+    display: flex;
+    flex-direction:column ;
+    flex-wrap: nowrap;
+}
+
+@mixin txt-color($color){
+    @if (lightness($color) <100%){
+        $color: white;
+
+    }
+    @else{
+        $color:black;
+    }
+    color:$color;
+}
+@mixin bg-txt-color($color){
+    @if (lightness($color) >30%){
+        $color: darken($color,40%);
+
+    }
+    @else{
+        $color:lightnen($color,30%);
+    }
+    color:$color;
+    font-weight: bold;
+}
+@mixin web-only{
+    @media screen and ( min-width: map-get($map: $preakpoints, $key:web )){
+    @content;  
+    }
+}
+
+@mixin web-display{
+    @include web-only{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;}
+
+    }
+
+
+    
+
+
+
+
+

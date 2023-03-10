@@ -1,0 +1,15 @@
+.footer{
+    background-color: lighten($color: black, $amount: 20%);
+    @include txt-color(black);
+    padding: $padding-bloc;
+    &__img img{
+        width:20%;
+    }
+    &__info ul{
+        list-style-type: none;
+        padding: 0;
+        & li{
+            margin-bottom: 1.5vh;
+        }
+    }
+}

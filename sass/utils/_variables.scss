@@ -1,0 +1,20 @@
+$width:150px;
+$height:auto;
+$primary-color:#9356DC;
+$secondary-color:#FF79DA;
+$tertiary-color:#99E2D0;
+$margin-bloc-anim:2vh;
+$margin-bloc: 4vh 0vh 5vh 0vh;
+$padding-bloc:2.5vh 3vh 2.5vh 3vh ;
+$init-position:0vh 0vh 0vh  (nth($list: $padding-bloc, $n:4 )*-1);
+$size-ico:17px;
+$bg-color:#f7f7f7;
+$bg-gradient-ho:linear-gradient(0deg, $primary-color 0%, $secondary-color 75%);
+$bg-gradient:linear-gradient(0deg, darken($primary-color, 10%) 0%, darken($secondary-color, 10%) 75%);
+$brd-button:25px;
+$shadow:2px 5px 16px 0px #00000036;
+
+
+$anim-dur:0.6s;
+$anim-delay:0.1s;
+$preakpoints:(web:700px)

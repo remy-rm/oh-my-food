@@ -1,0 +1,40 @@
+.load{
+    background-color: white;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    animation:charge  3s forwards cubic-bezier(.43,.03,.75,1.49);
+    z-index: 2;
+    &__img{
+        width:150px;
+        animation:spin 3s infinite linear ;
+    
+
+    }
+    &__ch{
+        display: flex;
+        align-items: center;
+        margin:$margin-bloc-anim;
+    }
+    &__ms{
+        margin-right: 1vh;
+       
+
+    }
+    &__sp{
+        height: 5px;
+        width: 5px;
+        margin: 1vh;
+        background-color:$tertiary-color;
+        animation:load $anim-dur infinite alternate-reverse backwards ease-in-out;
+        @for $i from 1 through 3{
+            &--pt#{$i} {
+                animation-delay: $anim-delay*$i;
+            }
+        }      
+ }
+}

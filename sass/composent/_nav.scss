@@ -1,0 +1,43 @@
+.nav{
+    padding: $padding-bloc;
+    &__menu{
+        @include web-display;
+        &--1{
+            display: flex;
+            align-items: center;
+            padding: $padding-bloc;
+            background-color: $bg-color;
+            margin: $margin-bloc;
+            border-radius: $brd-button;
+            box-shadow: $shadow;
+            
+            &--numb{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 1.4rem;
+                height: 1.4rem;
+                margin: $init-position;
+                background-color: $primary-color;
+                @include txt-color($primary-color);
+                border-radius: 100%;
+                padding: -3vh;
+                right: 1.2vh;
+                
+            }
+            &--ico{
+                padding-right: 2vh;
+                padding-left: 0.6vh;
+                color: darken($color: $bg-color, $amount: 40%);
+            
+            }
+            &:hover{
+                background-color: lighten($color: $primary-color, $amount: 35%);
+            }
+            &:hover> &--ico{
+                color: $primary-color;
+            }
+        }
+    }
+}

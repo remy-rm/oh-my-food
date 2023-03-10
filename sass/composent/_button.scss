@@ -1,0 +1,18 @@
+.button--form{   
+    color: white;
+    padding: $padding-bloc ;
+    margin: $margin-bloc;
+    display: block;
+    background-image:$bg-gradient ;
+    transition:background-image 0.3s ease-in-out;
+    @include txt-color($primary-color);
+    border-radius: $brd-button;
+    &:hover{
+        animation:gradiant 0.5s ease-in-out forwards ;
+    }
+    &:active{
+        scale: (0.9);
+        animation:gradiant reverse 0.2s ease-in ;
+    }
+
+}

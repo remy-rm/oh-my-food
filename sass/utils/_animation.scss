@@ -90,3 +90,15 @@
 
     }
 }
+@keyframes appear {
+    0%{
+        transform: translatey(100%);
+        opacity: 0;
+
+    }
+    100% {
+
+        transform: translatey(0%);
+        opacity: 1;
+    }
+}

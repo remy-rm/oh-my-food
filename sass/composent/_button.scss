@@ -16,3 +16,13 @@
     }
 
 }
+
+.command{
+    padding: $padding-bloc;
+    display: flex;
+    justify-content: center;
+    
+    & .button--form{
+        padding: nth($list:$padding-bloc , $n:1 ) nth($list: $padding-bloc, $n:2 )*2;
+    }
+ }

@@ -4,3 +4,97 @@
     border-radius: 34px;
     background-color: $bg-color;
 }
+.menu{
+    &__display{
+        @include web-display;
+    }
+    & h4{
+        position: relative;
+        display: inline-block;
+        &::before{
+            position: absolute;
+            content: "";
+            height: 3px;
+            width: 61%;
+            bottom: -5px;
+            background: $tertiary-color;
+        }   
+    }
+&:nth-child(2n+1) h4::before{
+        left: 15%;
+}    
+    padding: $padding-bloc;
+    &__card{
+        display: flex;
+        background-color: white;
+        box-shadow: $shadow;
+        border-radius: 15px;
+        overflow: hidden;
+        margin-bottom: 2vh;
+        &:hover > &--va{
+            animation:validate 1000ms forwards ease-in-out;
+            transform-origin: 100% 150%; 
+            & i{
+                animation: spin 1000ms forwards ease-in-out;  
+            }
+        }
+    
+    
+    animation:appear 1500ms ease-in-out both;
+    @for $i from 1 through 3 {
+        &--#{$i}{
+            animation-delay: $anim-delay*$i;
+        }
+    }
+
+    & p{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin: 2px;
+    }
+        
+    &--tittle{
+        overflow: hidden;
+        text-overflow: clip;
+        white-space: nowrap;
+        overflow: hidden;
+        &--h1{
+            
+        }
+        &--h2{
+            display: flex;
+            justify-content: space-between;
+            font-weight: lighter;
+            font-size: .9rem;
+        }
+    }
+    
+    
+
+        
+    &--va{
+        overflow: hidden;
+        background-color: $tertiary-color;
+        border-radius:0px 15px 15px 0px;
+        font-weight: 800;
+        width: 0%;
+        color: white;
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+    }
+    &--price{
+        flex-grow: 1;
+        display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    }
+    &--padding{
+        padding: 1vh 1.2vh;
+    }
+    }
+    
+ }

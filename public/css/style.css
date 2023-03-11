@@ -3,6 +3,50 @@ body {
   font-family: "roboto", sans-serif;
 }
 
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h3 {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-family: "Shrikhand";
+  font-weight: normal;
+  font-size: 1.7rem;
+  margin-right: 1rem;
+}
+
+.tittle {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+@media screen and (min-width: 700px) {
+  .tittle {
+    justify-content: center;
+  }
+}
+
+span {
+  font-weight: bold;
+}
+
+.command {
+  padding: 2.5vh 3vh 2.5vh 3vh;
+  display: flex;
+  justify-content: center;
+}
+.command .button--form {
+  padding: 2.5vh 6vh;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -80,6 +124,16 @@ body {
     width: 23%;
   }
 }
+@keyframes appear {
+  0% {
+    transform: translatey(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translatey(0%);
+    opacity: 1;
+  }
+}
 .button--form {
   color: white;
   padding: 2.5vh 3vh 2.5vh 3vh;
@@ -96,6 +150,15 @@ body {
 .button--form:active {
   scale: 0.9;
   animation: gradiant reverse 0.2s ease-in;
+}
+
+.command {
+  padding: 2.5vh 3vh 2.5vh 3vh;
+  display: flex;
+  justify-content: center;
+}
+.command .button--form {
+  padding: 2.5vh 6vh;
 }
 
 .load {
@@ -241,6 +304,96 @@ body {
   background-color: #f7f7f7;
 }
 
+.menu {
+  padding: 2.5vh 3vh 2.5vh 3vh;
+}
+@media screen and (min-width: 700px) {
+  .menu__display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+.menu h4 {
+  position: relative;
+  display: inline-block;
+}
+.menu h4::before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 61%;
+  bottom: -5px;
+  background: #99E2D0;
+}
+.menu:nth-child(2n+1) h4::before {
+  left: 15%;
+}
+.menu__card {
+  display: flex;
+  background-color: white;
+  box-shadow: 2px 5px 16px 0px rgba(0, 0, 0, 0.2117647059);
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 2vh;
+  animation: appear 1500ms ease-in-out both;
+}
+.menu__card:hover > .menu__card--va {
+  animation: validate 1000ms forwards ease-in-out;
+  transform-origin: 100% 150%;
+}
+.menu__card:hover > .menu__card--va i {
+  animation: spin 1000ms forwards ease-in-out;
+}
+.menu__card--1 {
+  animation-delay: 0.1s;
+}
+.menu__card--2 {
+  animation-delay: 0.2s;
+}
+.menu__card--3 {
+  animation-delay: 0.3s;
+}
+.menu__card p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 2px;
+}
+.menu__card--tittle {
+  overflow: hidden;
+  text-overflow: clip;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.menu__card--tittle--h2 {
+  display: flex;
+  justify-content: space-between;
+  font-weight: lighter;
+  font-size: 0.9rem;
+}
+.menu__card--va {
+  overflow: hidden;
+  background-color: #99E2D0;
+  border-radius: 0px 15px 15px 0px;
+  font-weight: 800;
+  width: 0%;
+  color: white;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu__card--price {
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.menu__card--padding {
+  padding: 1vh 1.2vh;
+}
+
 input[type=checkbox] {
   position: absolute;
   left: -9999px;
@@ -344,111 +497,6 @@ input[type=checkbox] {
 }
 .footer__info ul li {
   margin-bottom: 1.5vh;
-}
-
-body {
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-h3 {
-  margin-bottom: 1rem;
-}
-
-h1 {
-  font-family: "Shrikhand";
-  font-weight: normal;
-  font-size: 1.7rem;
-}
-
-.tittle {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.menu {
-  padding: 2.5vh 3vh 2.5vh 3vh;
-}
-.menu h4 {
-  position: relative;
-  display: inline-block;
-}
-.menu h4::before {
-  position: absolute;
-  content: "";
-  height: 3px;
-  width: 61%;
-  bottom: -5px;
-  background: #99E2D0;
-}
-.menu:nth-child(2n+1) h4::before {
-  left: 15%;
-}
-.menu__card {
-  display: flex;
-  background-color: white;
-  box-shadow: 2px 5px 16px 0px rgba(0, 0, 0, 0.2117647059);
-  border-radius: 15px;
-  overflow: hidden;
-  margin-bottom: 2vh;
-}
-.menu__card:hover > .menu__card--va {
-  animation: validate 1000ms forwards ease-in-out;
-  transform-origin: 100% 150%;
-}
-.menu__card:hover > .menu__card--va i {
-  animation: spin 1000ms forwards ease-in-out;
-}
-.menu__card p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  margin: 2px;
-}
-.menu__card--tittle {
-  overflow: hidden;
-  text-overflow: clip;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.menu__card--tittle--h2 {
-  display: flex;
-  justify-content: space-between;
-}
-.menu__card--va {
-  overflow: hidden;
-  background-color: #99E2D0;
-  border-radius: 0px 15px 15px 0px;
-  font-weight: 800;
-  width: 0%;
-  color: white;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.menu__card--price {
-  flex-grow: 1;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-}
-.menu__card--padding {
-  padding: 1vh 1.2vh;
-}
-
-.command {
-  padding: 2.5vh 3vh 2.5vh 3vh;
-  display: flex;
-  justify-content: center;
-}
-.command .button--form {
-  padding: 2.5vh 6vh;
 }
 
 /*# sourceMappingURL=style.css.map */

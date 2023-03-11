@@ -38,6 +38,12 @@ span {
   font-weight: bold;
 }
 
+h4 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
 .command {
   padding: 2.5vh 3vh 2.5vh 3vh;
   display: flex;

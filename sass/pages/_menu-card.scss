@@ -20,7 +20,7 @@
             background: $tertiary-color;
         }   
     }
-&:nth-child(2n+1) h4::before{
+&:nth-child(even) h4::before{
         left: 15%;
 }    
     padding: $padding-bloc;
@@ -41,7 +41,7 @@
     
     
     animation:appear 1500ms ease-in-out both;
-    @for $i from 1 through 3 {
+    @for $i from 1 through 4 {
         &--#{$i}{
             animation-delay: $anim-delay*$i;
         }
